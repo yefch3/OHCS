@@ -28,6 +28,7 @@ gem 'jbuilder', '~> 2.7'
 # Login form
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
+gem 'rails-ujs'
 gem 'simple_form'
 gem 'bootsnap'
 # authentication
