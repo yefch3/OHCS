@@ -4,4 +4,6 @@ class PatientsController < ApplicationController
     end  
     def profile
     end    
+    def login
+    end
 end
