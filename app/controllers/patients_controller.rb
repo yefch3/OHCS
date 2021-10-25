@@ -1,3 +1,7 @@
 class PatientsController < ApplicationController
-    before_action :authenticate_patients!    
+    def index
+        @user = current_patient
+    end  
+    def profile
+    end    
 end
