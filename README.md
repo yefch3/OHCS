@@ -22,3 +22,5 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+* https://github.com/heartcombo/devise/blob/main/README.md
