@@ -1,0 +1,38 @@
+<h1>Patient Profile</h1>
+<% flash.each do |name, msg| %>
+  <% if msg.is_a?(String) %>
+    <div class="alert alert-<%= name.to_s == 'notice' ? 'success' : 'danger' %>">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <%= content_tag :div, msg, :id => "flash_#{name}" %>
+    </div>
+  <% end %>
+<% end %>
+<a href="/dashboard">Rooms</a>
+
+<ul id="details">
+  <li>
+    Username:
+    <%= @patient.username %>
+  </li>
+  <li>
+    Email:
+    <%= @patient.email %>
+  </li>
+  <li>
+    Name:
+    <%= @patient.first_name + " " + @patient.last_name %>
+  </li>
+  <li>
+    Gender:
+    <%= @patient.gender %>
+  </li>
+  <li>
+    Birthday:
+    <%= @patient.birthday.strftime("%B %d, %Y") %>
+  </li>
+</ul>
+
+<div class="row">
+  <%= link_to 'Edit Info', '/patients/editinfo', :class => 'btn btn-primary col-2' %>
+  <%= link_to 'Change Password or Delete', '/patients/edit', :class => 'btn btn-danger col-2' %>
+</div>
